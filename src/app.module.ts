@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { TypeORMConfigService } from './typeorm/typeorm-config.service';
+import { TypeORMConfigService } from './typeorm/services/typeorm-config.service';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
