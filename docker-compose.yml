@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  mysql:
+    container_name: erpt-mysql
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ERPT
+      MYSQL_USER: ERPT
+      MYSQL_PASSWORD: j3DbynNRZyZ4
+    volumes:
+      - ./../volume_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+# DOCKER COMMAND TO GET INSIDE MYSQL CONTAINER
+# docker exec -it erpt-mysql mysql -uroot -proot
