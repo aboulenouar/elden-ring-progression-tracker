@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeORMConfigService } from './typeorm/services/typeorm-config.service';
 import { ConfigModule } from '@nestjs/config';
+import { CoreModule } from './core/core.module';
 
 @Module({
   imports: [TypeOrmModule.forRootAsync({
@@ -11,7 +12,7 @@ import { ConfigModule } from '@nestjs/config';
   }), ConfigModule.forRoot({
     envFilePath: ['./environment/.dev.env', './environment/.prod.env'],
     isGlobal: true
-  })],
+  }), CoreModule],
   controllers: [AppController],
   providers: [AppService],
 })
